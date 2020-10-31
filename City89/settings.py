@@ -100,3 +100,5 @@ MEDIA_ROOT = (BASE_DIR / "media")
 
 # django_allauth
 SITE_ID = 1
+
+LOGIN_REDIRECT_URL = "/"

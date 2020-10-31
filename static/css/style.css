@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.login_username {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.login_password {
+    width: 300px;
+    margin: 0 auto 20px;
+}
+
+.login_form{
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header{
+    display: flex;
+}
+
+.login_main {
+    margin: 50px 0 50px 0;
+}
+
+.my_card {
+    display: flex;
+    border: 1px solid #fff;
+    border-radius: 27px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 40px;
+}
+
+.my_card_header {
+    margin-left: 20px;
+}
+
+.my_card_city {
+    position: relative;
+    left: 20px;
+    width: 100%;
+    margin-right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.my_card_balls {
+    display: flex;
+    justify-content: center;
+    color: #b6e744;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.my_card_img {
+    position: relative;
+    top: 60px;
+}
+
+.my_searcher {
+    margin-bottom: 20px;
+}
+
+.searcher {
+    display: flex;
+}
+
+.search_icon {
+    position: relative;
+    top: 5px;
+    right: 50px;
+}
+
+

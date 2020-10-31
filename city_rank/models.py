@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 
 class CityParams(models.Model):
@@ -8,15 +9,18 @@ class CityParams(models.Model):
     value = models.SmallIntegerField()
     period = models.DateField("Период")
 
-    def __str__(self):
-        return "{}".format(self.code)
 
-    def parse(self):
-        pass
+def __str__(self):
+    return "{}".format(self.code)
 
-    class Meta:
-        verbose_name = 'Параметр города'
-        verbose_name_plural = 'Параметры города'
+
+def parse(self):
+    pass
+
+
+class Meta:
+    verbose_name = 'Параметр города'
+    verbose_name_plural = 'Параметры города'
 
 
 class City(models.Model):
