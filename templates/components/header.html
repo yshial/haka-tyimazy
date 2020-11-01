@@ -1,0 +1,37 @@
+{% load static %}
+
+<header class="header">
+
+    <nav class="white">
+        <div class="nav-wrapper container">
+
+                <a href="{% url 'main' %}" class="brand-logo"><img width="40" src="{% static 'image/logo.png' %}"
+                                                                   alt=""></a>
+
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+         {% if user.is_authenticated %}
+                <li>
+                    <form method="post" action="{% url 'account_logout' %}">
+                        {% csrf_token %}
+                        {% if redirect_field_value %}
+                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                        {% endif %}
+                        <button type="submit" class="out-button" style="display: none">Выйти</button>
+                    </form>
+                </li>
+             <li><span style="color: red; font-size: 0.8em">{{ user.username }}</span></li>
+                <li><a class="logout_link black-text" onclick="goOut()">Выход</a></li>
+            {% else %}
+                <li><a class="login_link black-text" href="{% url 'account_login' %}">Вход</a></li>
+            {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+</header>
+
+<script>
+    function goOut() {
+        document.querySelector('.out-button').click();
+    }
+</script>
