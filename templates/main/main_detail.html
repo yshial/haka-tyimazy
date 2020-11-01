@@ -1,0 +1,52 @@
+{% extends "account/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="my_detail">
+            <h4 class="detail_title">{{ city.name }}</h4>
+            <div class="detail_district">Ямало-ненецкий автономный округ</div>
+
+            <div class="detail_header">
+                <div class="view_city">
+                    <img class="view_city_img" src="{% static 'image/logo3.png' %}" alt="">
+                    <p class="view_city_size">{{ city.city_scale }}</p>
+                </div>
+                <div class="people">
+                    <img class="people_img" src="{% static 'image/people.png' %}" alt="">
+                    <p class="people_count">100 тыс. чел.</p>
+                </div>
+            </div>
+
+            <p class="detail_descriptions">{{ city.description }}</p>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m6 l4">
+                <div id="container1" class="circle"  data-count="44" data-valuemax='100'></div>
+                <p class="center">Чистый воздух</p>
+            </div>
+            <div class="col s12 m6 l4">
+                <div id="container2" class="circle" data-count="50" data-valuemax='100'></div>
+                <p class="center">Численность населения</p>
+            </div>
+            <div class="col s12 m6 l4">
+                <div id="container3" class="circle" data-count="51" data-valuemax='100'></div>
+                <p class="center">Дорожная сеть</p>
+            </div>
+            <div class="col s12 m6 l4">
+                <div id="container4" class="circle" data-count="58" data-valuemax='100'></div>
+                <p class="center">Спорт площадки</p>
+            </div>
+            <div class="col s12 m6 l4">
+                <div id="container5" class="circle" data-count="23" data-valuemax='100'></div>
+                <p class="center">Работают в непроизводственном секторе</p>
+            </div>
+            <div class="col s12 m6 l4">
+                <div id="container6" class="circle" data-count="10" data-valuemax='100'></div>
+                <p class="center">Озеленение</p>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

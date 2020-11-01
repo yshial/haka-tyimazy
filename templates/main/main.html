@@ -1,0 +1,29 @@
+{% extends "account/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="login_main">
+    <div class="container">
+        <div class="searcher">
+            <input class="my_searcher" type="text">
+            <i class="material-icons search_icon">search</i>
+        </div>
+
+        <br>
+        <div class="row">
+            {% for city in cities %}
+            <div class="col s12 m6 l4">
+                <a class="my_card" href="{{ city.get_absolute_url }}">
+                    <div class="my_card_header">
+                        <img class="my_card_img" src="{% static 'image/logo2.png' %}" width="100px" alt="">
+                        <p class="my_card_balls">180</p>
+                    </div>
+                    <div class="my_card_city">{{ city.name }}</div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+
+{% endblock %}
